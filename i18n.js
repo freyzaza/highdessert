@@ -42,6 +42,7 @@ window.HD_I18N_EN = {
 "Bagaimana cara memeriksa nomor izin edar BPOM?": "How can I check a BPOM registration number?",
 "Bagaimana cara memverifikasi status halal?": "How can I verify halal status?",
 "Bagian dari HDI Group": "Part of HDI Group",
+"Berada dalam ekosistem HDI Group yang menghubungkan produk, pengetahuan, dan jaringan bisnis untuk mendukung kesehatan dan wellness.": "Part of the HDI Group ecosystem, connecting products, knowledge, and business networks to support health and wellness.",
 "Bagian dari HDI Group · KBLI 46441 / 46461 / 46339 / 72101": "Part of HDI Group · KBLI 46441 / 46461 / 46339 / 72101",
 "Bagian dari HDI Group—terhubung dalam satu ekosistem kesehatan dan wellness yang terintegrasi, kolaboratif, dan bertanggung jawab.": "Part of HDI Group—connected in one integrated, collaborative, and responsible health and wellness ecosystem.",
 "Bagian dari jaringan HDI Group yang menerima distribusi produk intra-grup.": "Part of the HDI Group network that receives intra-group product distribution.",

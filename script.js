@@ -88,19 +88,26 @@
 
   // ---------- Scroll reveal ----------
   const reveals = document.querySelectorAll('.reveal, .slide-in, .slide-up, .timeline, [data-carousel]');
-  if ('IntersectionObserver' in window && !reduceMotion) {
+  const revealTargets = reduceMotion
+    ? [...reveals].filter((el) => el.classList.contains('reveal'))
+    : [...reveals];
+  if ('IntersectionObserver' in window && revealTargets.length) {
     const io = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
+        const el = entry.target;
         if (entry.isIntersecting) {
-          const el = entry.target;
           el.classList.add('is-visible');
-          io.unobserve(el);
           // hapus delay stagger setelah muncul agar efek hover terasa instan
           el.addEventListener('transitionend', () => { el.style.transitionDelay = '0s'; el.style.setProperty('--d', '0s'); }, { once: true });
+        } else {
+          el.classList.remove('is-visible');
         }
       });
     }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-    reveals.forEach((el) => io.observe(el));
+    revealTargets.forEach((el) => io.observe(el));
+    reveals.forEach((el) => {
+      if (!revealTargets.includes(el)) el.classList.add('is-visible');
+    });
   } else {
     reveals.forEach((el) => el.classList.add('is-visible'));
   }
